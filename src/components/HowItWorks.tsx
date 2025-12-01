@@ -5,22 +5,22 @@ const HowItWorks = () => {
     {
       number: "01",
       icon: QrCode,
-      title: "Scan QR Code",
-      description: "Scanne den QR-Code am Event-Eingang mit der LinkUp App",
+      title: "Scan Entry QR",
+      description: "Event-Gäste scannen den Vayn QR-Code und sind in Sekunden eingecheckt.",
       color: "from-primary to-primary-light"
     },
     {
       number: "02", 
       icon: Users,
-      title: "Join Event",
-      description: "Werde automatisch zum Event hinzugefügt und sieh andere Teilnehmer",
+      title: "Discover Profiles",
+      description: "Vayn listet alle Besucher:innen mit Interessen, Skills und Match-Signalen.",
       color: "from-secondary to-secondary-light"
     },
     {
       number: "03",
       icon: MessageCircle,
-      title: "Connect & Chat",
-      description: "Connecte mit interessanten Menschen und starte Gespräche",
+      title: "Chat & Follow Up",
+      description: "Direkte Chats bleiben 24h offen – perfekt für Follow-ups ohne Visitenkarten.",
       color: "from-primary to-secondary"
     }
   ];
@@ -102,7 +102,7 @@ const HowItWorks = () => {
           <div className="inline-block p-6 bg-card rounded-2xl border shadow-lg">
             <h3 className="text-lg font-semibold mb-2">Ready to start networking?</h3>
             <p className="text-muted-foreground mb-4">
-              Lade LinkUp herunter und entdecke Events in deiner Nähe
+              Lade Vayn herunter oder sichere dir frühzeitigen Zugang für dein Event.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary-dark transition-colors">

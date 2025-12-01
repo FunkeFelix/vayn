@@ -21,13 +21,14 @@ const Privacy = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">1. Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
               <p className="text-muted-foreground leading-relaxed">
-                <strong>Felix Funke</strong><br />
-                Nußdorfer Straße 9<br />
-                88662 Überlingen, Deutschland<br />
-                Telefon: <a href="tel:+4917663364095">+49 (0) 176 6336 4095</a><br />
-                E-Mail: <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a>
+                <strong>Vayn UG (haftungsbeschränkt)</strong><br />
+                Metzer Straße 30<br />
+                50677 Köln, Deutschland<br />
+                Geschäftsführer: Leon Röll Carrere<br />
+                Handelsregister: HRB 125570, Amtsgericht Köln<br />
+                E-Mail: <a href="mailto:lrc@vaynconnect.de">lrc@vaynconnect.de</a>
               </p>
-              <p className="text-xs text-muted-foreground mt-2">Letzte Aktualisierung: 27.08.2025</p>
+              <p className="text-xs text-muted-foreground mt-2">Letzte Aktualisierung: 01.12.2025</p>
             </section>
 
             {/* 2. Zwecke & Rechtsgrundlagen */}
@@ -114,7 +115,7 @@ const Privacy = () => {
                 Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
                 Datenübertragbarkeit sowie Widerspruch (Art. 15–21 DSGVO). Zudem besteht ein Beschwerderecht
                 bei einer Datenschutzaufsichtsbehörde. Kontakt:{" "}
-                <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a>
+                <a href="mailto:lrc@vaynconnect.de">lrc@vaynconnect.de</a>
               </p>
             </section>
 
@@ -128,14 +129,15 @@ const Privacy = () => {
             </section>
 
             {/* Impressum / Provider Identification */}
-            <section>
+            <section id="impressum">
               <h2 className="text-2xl font-semibold mb-4">Impressum</h2>
               <p className="text-muted-foreground leading-relaxed">
-                <strong>Diensteanbieter/Verantwortlich für Inhalte gem. § 55 Abs. 2 RStV</strong><br />
-                Felix Funke, Nußdorfer Straße 9, 88662 Überlingen, Deutschland<br />
-                Telefon: <a href="tel:+4917663364095">+49 (0) 176 6336 4095</a><br />
-                E-Mail: <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a><br />
-                USt-IdNr. nach § 27a UStG: <strong>DE 346946939</strong>
+                <strong>Diensteanbieter / Verantwortlich für Inhalte gem. § 55 Abs. 2 RStV</strong><br />
+                Vayn UG (haftungsbeschränkt)<br />
+                Metzer Straße 30, 50677 Köln, Deutschland<br />
+                Geschäftsführer: Leon Röll Carrere<br />
+                Handelsregister: HRB 125570, Amtsgericht Köln<br />
+                E-Mail: <a href="mailto:lrc@vaynconnect.de">lrc@vaynconnect.de</a>
               </p>
             </section>
           </div>
@@ -146,9 +148,9 @@ const Privacy = () => {
             <section className="space-y-4">
               <h4 className="font-semibold">Data Controller</h4>
               <p className="text-muted-foreground">
-                <strong>Felix Funke</strong>, Nußdorfer Straße 9, 88662 Überlingen, Germany<br />
-                Phone: <a href="tel:+4917663364095">+49 176 6336 4095</a> · Email:{" "}
-                <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a>
+                <strong>Vayn UG</strong>, Metzer Straße 30, 50677 Cologne, Germany<br />
+                Managing Director: Leon Röll Carrere · Email:{" "}
+                <a href="mailto:lrc@vaynconnect.de">lrc@vaynconnect.de</a>
               </p>
 
               <h4 className="font-semibold">Data We Process</h4>

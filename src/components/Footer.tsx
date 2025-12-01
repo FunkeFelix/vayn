@@ -8,21 +8,21 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-text">LinkUp</h3>
+            <h3 className="text-2xl font-bold gradient-text">Vayn</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Dein Event. Deine Connections. 
-              Die moderne Art zu networken.
+              Die Event-App aus Köln für echte Verbindungen. Vayn verwandelt jeden QR-Code
+              am Einlass in neue Gespräche.
             </p>
             <div className="flex items-center gap-4">
               <a 
-                href="https://instagram.com/linkup" 
+                href="https://instagram.com/vaynconnect" 
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="mailto:support@linkup-app.de" 
+                href="mailto:lrc@vaynconnect.de" 
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -53,10 +53,10 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:support@linkup-app.de" 
+                  href="mailto:lrc@vaynconnect.de" 
                   className="hover:text-primary transition-colors"
                 >
-                  support@linkup-app.de
+                  lrc@vaynconnect.de
                 </a>
               </li>
               <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
@@ -74,7 +74,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Impressum</a></li>
+              <li>
+                <Link to="/privacy#impressum" className="hover:text-primary transition-colors">
+                  Impressum
+                </Link>
+              </li>
               <li><a href="#" className="hover:text-primary transition-colors">Cookies</a></li>
             </ul>
           </div>
@@ -84,7 +88,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
-              <h4 className="font-semibold mb-2">Lade LinkUp herunter</h4>
+              <h4 className="font-semibold mb-2">Lade Vayn herunter</h4>
               <p className="text-muted-foreground">
                 Verfügbar für iOS und Android
               </p>
@@ -110,8 +114,8 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2024 LinkUp. All rights reserved.</p>
-          <p>Made with ❤️ for the networking community</p>
+          <p>© 2024 Vayn UG (haftungsbeschränkt) · HRB 125570 · Amtsgericht Köln</p>
+          <p>Metzer Straße 30 · 50677 Köln · Geschäftsführer: Leon Röll Carrere</p>
         </div>
       </div>
     </footer>

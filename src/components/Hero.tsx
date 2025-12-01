@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Smartphone, Users, Zap } from "lucide-react";
 import heroMockup from "@/assets/app-hero-mockup.jpg";
+import vaynMark from "@/assets/icon/1.0x/logo.png";
 
 const Hero = () => {
   return (
@@ -10,17 +11,26 @@ const Hero = () => {
           {/* Content */}
           <div className="space-y-8 animate-slide-up">
             <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <img
+                  src={vaynMark}
+                  alt="Vayn Logo"
+                  className="w-12 h-12 rounded-2xl shadow-lg"
+                />
+                <p className="text-sm font-semibold tracking-[0.3em] uppercase text-muted-foreground">
+                  Made in Cologne • Germany
+                </p>
+              </div>
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="gradient-text">LinkUp</span>
+                <span className="gradient-text">Vayn</span> verbindet Menschen, die schon am selben Event sind.
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground font-medium">
-                Dein Event. Deine Connections.
+                Sofort sehen, wer vor Ort ist, matchen via QR-Login und bis zu 24 Stunden nach dem Event weiter chatten.
               </p>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              Connect with people at events via QR code login. See who's coming, 
-              reconnect up to 24h later, and start chatting instantly.
+              Vayn ist die Event-App für echte Begegnungen. Veranstalter:innen aktivieren die Crowd mit einem einzigen QR-Code – Besucher:innen entdecken Profile, teilen Interessen und bleiben über ein abgesichertes Chat-Fenster verbunden.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -36,18 +46,16 @@ const Hero = () => {
 
             {/* Quick stats */}
             <div className="flex gap-8 pt-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">10k+</div>
-                <div className="text-sm text-muted-foreground">Active Users</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">500+</div>
-                <div className="text-sm text-muted-foreground">Events</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold gradient-text">24h</div>
-                <div className="text-sm text-muted-foreground">Connect Time</div>
-              </div>
+              {[
+                { label: "Community Connections", value: "50k+" },
+                { label: "Kurierte Events", value: "600+" },
+                { label: "Secure Follow-Ups", value: "24h" }
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="text-2xl font-bold gradient-text">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -56,7 +64,7 @@ const Hero = () => {
             <div className="relative z-10 animate-float">
               <img 
                 src={heroMockup} 
-                alt="LinkUp App Interface"
+                alt="Vayn App Interface"
                 className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
               />
             </div>

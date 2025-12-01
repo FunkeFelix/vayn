@@ -52,7 +52,7 @@ const Support = () => {
             <div>
               <h2 className="text-2xl font-semibold mb-6">Kontaktieren Sie uns</h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Haben Sie Fragen zu LinkUp oder benötigen Sie Hilfe? Wir sind hier, um zu helfen! 
+                Haben Sie Fragen zu Vayn oder benötigen Sie Hilfe? Wir sind hier, um zu helfen! 
                 Senden Sie uns eine Nachricht und wir werden uns schnellstmöglich bei Ihnen melden.
               </p>
 
@@ -61,7 +61,7 @@ const Support = () => {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium">E-Mail Support</p>
-                    <p className="text-sm text-muted-foreground">felixfunke456@gmail.com</p>
+                    <p className="text-sm text-muted-foreground">lrc@vaynconnect.de</p>
                   </div>
                 </div>
                 
@@ -69,6 +69,13 @@ const Support = () => {
                   <p className="text-sm font-medium text-primary mb-1">Antwortzeit</p>
                   <p className="text-sm text-muted-foreground">
                     Normalerweise antworten wir innerhalb von 24 Stunden
+                  </p>
+                </div>
+                <div className="p-4 bg-card rounded-xl border">
+                  <p className="text-sm font-medium text-muted-foreground mb-1">Vayn UG (haftungsbeschränkt)</p>
+                  <p className="text-sm text-muted-foreground">
+                    Metzer Straße 30 · 50677 Köln · HRB 125570<br />
+                    Geschäftsführer: Leon Röll Carrere
                   </p>
                 </div>
               </div>
@@ -150,7 +157,7 @@ const Support = () => {
               <div>
                 <h4 className="font-medium mb-2">Wie funktioniert der QR-Code Login?</h4>
                 <p className="text-sm text-muted-foreground">
-                  Scannen Sie einfach den QR-Code am Event-Eingang mit der LinkUp App. 
+                  Scannen Sie einfach den QR-Code am Event-Eingang mit der Vayn App. 
                   Sie werden automatisch zum Event hinzugefügt und können andere Teilnehmer sehen.
                 </p>
               </div>
@@ -161,9 +168,9 @@ const Support = () => {
                 </p>
               </div>
               <div>
-                <h4 className="font-medium mb-2">Ist LinkUp kostenlos?</h4>
+                <h4 className="font-medium mb-2">Ist Vayn kostenlos?</h4>
                 <p className="text-sm text-muted-foreground">
-                  Ja! Die Grundfunktionen sind kostenlos. Für erweiterte Features gibt es LinkUp Premium für 2,99€/Monat.
+                  Ja! Die Grundfunktionen sind kostenlos. Für erweiterte Features gibt es Vayn Premium für 2,99€/Monat.
                 </p>
               </div>
             </div>

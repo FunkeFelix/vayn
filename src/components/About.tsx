@@ -35,27 +35,26 @@ const About = () => {
                 Sicherheit & <span className="gradient-text">Vertrauen</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Bei LinkUp steht deine Privatsphäre an erster Stelle. 
-                Wir verwenden modernste Security-Standards und 
-                transparente Datenschutzpraktiken.
+                Vayn ist eine deutsche Company mit Sitz in Köln. Wir entwickeln eine Event-App,
+                die Sicherheit, DSGVO und Nutzerfreundlichkeit gleichermaßen priorisiert.
               </p>
             </div>
 
             <div className="space-y-6">
               <div className="p-6 bg-card rounded-2xl border">
-                <h3 className="text-lg font-semibold mb-3">Warum LinkUp?</h3>
+                <h3 className="text-lg font-semibold mb-3">Warum Vayn?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Networking sollte natürlich und spontan sein. LinkUp macht es möglich, 
-                  dass sich interessante Menschen auf Events finden können, ohne die 
-                  Komplexität traditioneller Social Networks. Einfach, sicher, effektiv.
+                  Wir glauben an spontane Begegnungen ohne Social-Media-Rauschen. Vayn
+                  verbindet Menschen dort, wo sie sich ohnehin treffen – mit Technologie,
+                  die zuverlässig im Hintergrund funktioniert.
                 </p>
               </div>
 
               <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
                 <h3 className="text-lg font-semibold mb-3 text-primary">Unsere Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Wir glauben, dass jede Begegnung das Potenzial für etwas Großartiges hat. 
-                  LinkUp hilft dabei, diese wertvollen Connections zu ermöglichen und zu verstärken.
+                  Jede Begegnung hat Potenzial. Vayn UG entwickelt Tools, die Veranstalter:innen
+                  und Besucher:innen helfen, diese Chancen festzuhalten.
                 </p>
               </div>
             </div>
@@ -87,7 +86,7 @@ const About = () => {
         {/* Stats Section */}
         <div className="mt-20 p-8 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-3xl border border-primary/20">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">LinkUp in Zahlen</h3>
+            <h3 className="text-2xl font-bold mb-2">Vayn in Zahlen</h3>
             <p className="text-muted-foreground">
               Das Vertrauen unserer Community spricht für sich
             </p>

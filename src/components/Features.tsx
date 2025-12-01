@@ -7,29 +7,29 @@ const Features = () => {
   const features = [
     {
       icon: QrCode,
-      title: "QR-Code Login",
-      description: "Einfach scannen und sofort dabei sein. Kein umständliches Registrieren oder Suchen.",
+      title: "QR Access, No Friction",
+      description: "Ein einziger Scan am Eingang und die Community ist live. Keine Formulare, keine Warteschlangen.",
       image: qrFeature,
       color: "text-primary"
     },
     {
       icon: Users,
-      title: "See Who's Attending",
-      description: "Entdecke interessante Menschen bereits vor dem Event und plane deine Connections.",
+      title: "Live Guest Graph",
+      description: "Vayn zeigt dir, wer gerade im Raum ist – inklusive Interessen und beruflichem Fokus.",
       image: attendeesFeature,
       color: "text-secondary"
     },
     {
       icon: Clock,
-      title: "24h After-Event Connection",
-      description: "Verpasse keine Gelegenheit. Connecte bis zu 24 Stunden nach dem Event.",
+      title: "24h Smart Follow-Up",
+      description: "Verbindungen bleiben 24 Stunden offen, damit Gespräche auch nach dem Event weitergehen.",
       image: null,
       color: "text-accent-foreground"
     },
     {
       icon: MessageCircle,
-      title: "Instant Chat",
-      description: "Starte sofort Gespräche und baue wertvolle berufliche Beziehungen auf.",
+      title: "Secure Chats",
+      description: "Direkter Chat mit Icebreaker Prompts – DSGVO-konform und auf deutschen Servern gehostet.",
       image: chatFeature,
       color: "text-primary"
     }
@@ -40,11 +40,10 @@ const Features = () => {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Warum <span className="gradient-text">LinkUp</span>?
+            Warum <span className="gradient-text">Vayn</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Networking war noch nie so einfach. Entdecke die Features, 
-            die LinkUp zur perfekten Event-App machen.
+            Die Networking Engine für Festivals, Konferenzen und Private Member Events – optimiert für echte Gespräche.
           </p>
         </div>
 
@@ -86,7 +85,7 @@ const Features = () => {
         <div className="text-center mt-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full text-primary font-medium">
             <Users className="w-5 h-5" />
-            Join 10,000+ professionals already networking smarter
+            Bereits 10.000+ Professionals vertrauen auf Vayn für meaningful connections
           </div>
         </div>
       </div>

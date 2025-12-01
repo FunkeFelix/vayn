@@ -7,7 +7,7 @@ const Pricing = () => {
       name: "Free",
       price: "0",
       period: "Forever",
-      description: "Perfect für gelegentliche Event-Besucher",
+      description: "Perfekt für neugierige Event-Besucher:innen",
       features: [
         "QR-Code Event Login",
         "Basis Profil",
@@ -31,7 +31,8 @@ const Pricing = () => {
         "Advanced Chat Features",
         "Event Analytics",
         "Custom QR Codes",
-        "LinkedIn Integration"
+        "LinkedIn Integration",
+        "Early Feature Drops"
       ],
       buttonText: "Premium werden",
       popular: true
@@ -43,11 +44,10 @@ const Pricing = () => {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            Simple Pricing
+            Vayn Pricing
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Wähle den Plan, der zu deinem Networking-Stil passt. 
-            Jederzeit kündbar, keine versteckten Kosten.
+            Wähle den Plan, der zu deinem Networking-Stil passt. Keine versteckten Gebühren, monatlich kündbar.
           </p>
         </div>
 
