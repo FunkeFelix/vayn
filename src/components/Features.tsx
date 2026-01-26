@@ -1,91 +1,94 @@
-import { QrCode, Users, Clock, MessageCircle } from "lucide-react";
-import qrFeature from "@/assets/qr-feature.jpg";
-import attendeesFeature from "@/assets/attendees-feature.jpg";
-import chatFeature from "@/assets/chat-feature.jpg";
+import { QrCode, Users, User, Send, MessageCircle, Check } from "lucide-react";
 
 const Features = () => {
-  const features = [
+  const benefits = [
+    "Schneller Einstieg per QR",
+    "Mehr relevante Kontakte",
+    "Klarer, respektvoller Kontakt durch das Anfrage-System",
+    "Sichtbarkeit nach dem Event steuerbar",
+  ];
+
+  const highlights = [
     {
       icon: QrCode,
-      title: "QR Access, No Friction",
-      description: "Ein einziger Scan am Eingang und die Community ist live. Keine Formulare, keine Warteschlangen.",
-      image: qrFeature,
-      color: "text-primary"
+      title: "QR scannen & beitreten",
+      description: "In Sekunden im Event, ohne Formulare."
     },
     {
       icon: Users,
-      title: "Live Guest Graph",
-      description: "Vayn zeigt dir, wer gerade im Raum ist – inklusive Interessen und beruflichem Fokus.",
-      image: attendeesFeature,
-      color: "text-secondary"
+      title: "Teilnehmer sehen",
+      description: "Du siehst, wer gerade da ist."
     },
     {
-      icon: Clock,
-      title: "24h Smart Follow-Up",
-      description: "Verbindungen bleiben 24 Stunden offen, damit Gespräche auch nach dem Event weitergehen.",
-      image: null,
-      color: "text-accent-foreground"
+      icon: User,
+      title: "Profile öffnen",
+      description: "Kurz das Profil ansehen."
+    },
+    {
+      icon: Send,
+      title: "Anfrage senden",
+      description: "Erst verbinden, dann chatten."
     },
     {
       icon: MessageCircle,
-      title: "Secure Chats",
-      description: "Direkter Chat mit Icebreaker Prompts – DSGVO-konform und auf deutschen Servern gehostet.",
-      image: chatFeature,
-      color: "text-primary"
+      title: "1:1 chatten",
+      description: "Nach Annahme direkt schreiben."
     }
   ];
 
   return (
-    <section className="section-padding bg-muted/30">
+    <section id="warum-vayn" className="section-padding bg-muted/30 section-glow">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Warum <span className="gradient-text">Vayn</span>?
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Die Networking Engine für Festivals, Konferenzen und Private Member Events – optimiert für echte Gespräche.
-          </p>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Warum <span className="gradient-text">Vayn</span>?
+              </h2>
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                Auf Events willst du schnell wissen, wer da ist. Vayn macht den ersten Schritt
+                leicht und spart dir den unangenehmen Start.
+              </p>
+            </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div 
-                key={index}
-                className="feature-card group animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="space-y-4">
-                  {feature.image && (
-                    <div className="aspect-video rounded-xl overflow-hidden mb-4">
-                      <img 
-                        src={feature.image} 
-                        alt={feature.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+            <ul className="space-y-3 text-sm sm:text-base">
+              {benefits.map((benefit) => (
+                <li key={benefit} className="flex items-start gap-3 text-muted-foreground">
+                  <span className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Check className="h-4 w-4" />
+                  </span>
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-sm text-muted-foreground">
+              Verbindungen lassen sich jederzeit beenden. Danach wird der Chat ausgeblendet.
+              Wie lange du nach dem Event sichtbar bist, stellst du selbst ein.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4 stagger-reveal">
+            {highlights.map((highlight, index) => {
+              const Icon = highlight.icon;
+              return (
+                <div
+                  key={highlight.title}
+                  className="feature-card p-5 sm:p-6"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
-                  )}
-                  
-                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center ${!feature.image ? 'mx-auto' : ''}`}>
-                    <Icon className={`w-6 h-6 ${feature.color}`} />
+                    <h3 className="text-lg font-semibold">{highlight.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {highlight.description}
+                    </p>
                   </div>
-                  
-                  <h3 className="text-xl font-semibold">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full text-primary font-medium">
-            <Users className="w-5 h-5" />
-            Bereits 10.000+ Professionals vertrauen auf Vayn für meaningful connections
+              );
+            })}
           </div>
         </div>
       </div>

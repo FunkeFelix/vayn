@@ -61,7 +61,7 @@ const Support = () => {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium">E-Mail Support</p>
-                    <p className="text-sm text-muted-foreground">lrc@vaynconnect.de</p>
+                    <p className="text-sm text-muted-foreground">support@vaynconnect.de</p>
                   </div>
                 </div>
                 

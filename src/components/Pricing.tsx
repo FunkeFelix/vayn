@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 const Pricing = () => {
   const plans = [
     {
-      name: "Free",
+      name: "Kostenlos",
       price: "0",
-      period: "Forever",
-      description: "Perfekt für neugierige Event-Besucher:innen",
+      period: "",
+      description: "Für alle, die sofort loslegen wollen",
       features: [
-        "QR-Code Event Login",
-        "Basis Profil",
-        "Event Teilnehmerliste",
-        "24h Connect Window",
-        "Standard Chat"
+        "QR-Code scannen und Event beitreten",
+        "Teilnehmer sehen und Profile öffnen",
+        "Verbindungsanfragen senden",
+        "1:1 Chat nach Annahme",
+        "Sichtbarkeit nach dem Event einstellen"
       ],
       buttonText: "Kostenlos starten",
       popular: false
@@ -21,33 +21,27 @@ const Pricing = () => {
     {
       name: "Premium",
       price: "2,99",
-      period: "per month",
-      description: "Für aktive Networker und Professionals",
+      period: "pro Monat",
+      description: "Mehr Sichtbarkeit und mehr Zugriff",
       features: [
-        "Alle Free Features",
-        "Erweiterte Profile",
-        "Priority Support",
-        "Unlimited Connections",
-        "Advanced Chat Features",
-        "Event Analytics",
-        "Custom QR Codes",
-        "LinkedIn Integration",
-        "Early Feature Drops"
+        "Mehr Sichtbarkeit nach dem Event",
+        "Sichtbarkeit für zukünftige Events",
+        "Mehr Zugriff auf Premium-Funktionen"
       ],
-      buttonText: "Premium werden",
+      buttonText: "Premium freischalten",
       popular: true
     }
   ];
 
   return (
-    <section className="section-padding bg-muted/30">
+    <section id="premium" className="section-padding bg-muted/30">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Vayn Pricing
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Premium
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Wähle den Plan, der zu deinem Networking-Stil passt. Keine versteckten Gebühren, monatlich kündbar.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Starte kostenlos. Premium schaltet mehr Sichtbarkeit und Funktionen frei.
           </p>
         </div>
 
@@ -55,7 +49,7 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`relative p-8 rounded-3xl border transition-all duration-300 hover:scale-105 ${
+              className={`relative p-6 sm:p-8 rounded-3xl border transition-all duration-300 sm:hover:scale-105 ${
                 plan.popular 
                   ? 'bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20 shadow-lg' 
                   : 'bg-card border-border'
@@ -65,7 +59,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-medium flex items-center gap-2">
                     <Star className="w-4 h-4" />
-                    Most Popular
+                    Beliebt
                   </div>
                 </div>
               )}
@@ -77,8 +71,14 @@ const Pricing = () => {
                 </div>
 
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold gradient-text">€{plan.price}</span>
-                  <span className="text-muted-foreground">/{plan.period}</span>
+                  {plan.price === "0" ? (
+                    <span className="text-4xl font-bold gradient-text">Kostenlos</span>
+                  ) : (
+                    <>
+                      <span className="text-4xl font-bold gradient-text">€{plan.price}</span>
+                      <span className="text-muted-foreground">/{plan.period}</span>
+                    </>
+                  )}
                 </div>
 
                 <ul className="space-y-3">
@@ -108,16 +108,6 @@ const Pricing = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Money back guarantee */}
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-card rounded-full border shadow-sm">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span className="text-sm text-muted-foreground">
-              30 Tage Geld-zurück-Garantie • Jederzeit kündbar
-            </span>
-          </div>
         </div>
       </div>
     </section>

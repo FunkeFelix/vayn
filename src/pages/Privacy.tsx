@@ -59,7 +59,6 @@ const Privacy = () => {
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-2">
                 Chats werden während Übertragung und Speicherung verschlüsselt („in transit“ &amp; „at rest“).
-                <strong> Ende-zu-Ende-Verschlüsselung (E2EE) wird nicht eingesetzt.</strong>
               </p>
             </section>
 
@@ -156,8 +155,7 @@ const Privacy = () => {
               <h4 className="font-semibold">Data We Process</h4>
               <p className="text-muted-foreground">
                 Account & profile data, event participation (QR check-ins), connections, chat content/metadata,
-                technical logs, and—if premium is used—billing-related data. Encryption in transit & at rest;
-                no end-to-end encryption.
+                technical logs, and—if premium is used—billing-related data. Encryption in transit & at rest.
               </p>
 
               <h4 className="font-semibold">Legal Bases & Retention</h4>

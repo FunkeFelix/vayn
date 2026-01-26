@@ -7,6 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Support from "./pages/Support";
+import AccountDeletion from "./pages/AccountDeletion";
+import ChildSafetyStandards from "./pages/ChildSafetyStandards";
+import ForOrganizers from "./pages/ForOrganizers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +24,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/account-deletion" element={<AccountDeletion />} />
+          <Route path="/child-safety-standards" element={<ChildSafetyStandards />} />
+          <Route path="/fuer-veranstalter" element={<ForOrganizers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

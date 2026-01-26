@@ -10,19 +10,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold gradient-text">Vayn</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Die Event-App aus Köln für echte Verbindungen. Vayn verwandelt jeden QR-Code
-              am Einlass in neue Gespräche.
+              Die Event-App aus Köln für echte Verbindungen. Vayn verwandelt
+              jeden QR-Code am Einlass in neue Gespräche.
             </p>
             <div className="flex items-center gap-4">
-              <a 
-                href="https://instagram.com/vaynconnect" 
+              <a
+                href="https://instagram.com/vaynconnect"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="mailto:lrc@vaynconnect.de" 
+              <a
+                href="mailto:support@vaynconnect.de"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -33,12 +33,48 @@ const Footer = () => {
 
           {/* Product */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Product</h4>
+            <h4 className="font-semibold">Produkt</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-primary transition-colors">Pricing</a></li>
-              <li><a href="#how-it-works" className="hover:text-primary transition-colors">How it Works</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Updates</a></li>
+              <li>
+                <Link
+                  to="/fuer-veranstalter"
+                  className="hover:text-primary transition-colors"
+                >
+                  Für Veranstalter
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#warum-vayn"
+                  className="hover:text-primary transition-colors"
+                >
+                  Warum Vayn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#so-funktionierts"
+                  className="hover:text-primary transition-colors"
+                >
+                  So funktioniert's
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#premium"
+                  className="hover:text-primary transition-colors"
+                >
+                  Premium
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#fuer-wen"
+                  className="hover:text-primary transition-colors"
+                >
+                  Für wen?
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -47,39 +83,80 @@ const Footer = () => {
             <h4 className="font-semibold">Support</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <Link to="/support" className="hover:text-primary transition-colors">
-                  Help Center
+                <Link
+                  to="/support"
+                  className="hover:text-primary transition-colors"
+                >
+                  Hilfe
                 </Link>
               </li>
               <li>
-                <a 
-                  href="mailto:lrc@vaynconnect.de" 
+                <a
+                  href="mailto:support@vaynconnect.de"
                   className="hover:text-primary transition-colors"
                 >
-                  lrc@vaynconnect.de
+                  support@vaynconnect.de
                 </a>
               </li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Community</a></li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Gemeinschaft
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Legal */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Legal</h4>
+            <h4 className="font-semibold">Rechtliches</h4>
             <ul className="space-y-2 text-muted-foreground">
               <li>
-                <Link to="/privacy" className="hover:text-primary transition-colors">
-                  Privacy Policy
+                <Link
+                  to="/privacy"
+                  className="hover:text-primary transition-colors"
+                >
+                  Datenschutz
                 </Link>
               </li>
-              <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
               <li>
-                <Link to="/privacy#impressum" className="hover:text-primary transition-colors">
+                <Link
+                  to="/account-deletion"
+                  className="hover:text-primary transition-colors"
+                >
+                  Kontolöschung
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/child-safety-standards"
+                  className="hover:text-primary transition-colors"
+                >
+                  Schutz von Kindern
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  AGB
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/privacy#impressum"
+                  className="hover:text-primary transition-colors"
+                >
                   Impressum
                 </Link>
               </li>
-              <li><a href="#" className="hover:text-primary transition-colors">Cookies</a></li>
+              <li>
+                <a href="#" className="hover:text-primary transition-colors">
+                  Cookies
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -94,15 +171,15 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a 
-                href="#" 
+              <a
+                href="https://apps.apple.com/de/app/vayn/id6757141911"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-medium hover:bg-primary-dark transition-colors"
               >
                 <Smartphone className="w-5 h-5" />
                 App Store
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-xl font-medium hover:bg-secondary-dark transition-colors"
               >
                 <Smartphone className="w-5 h-5" />
@@ -114,8 +191,12 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2024 Vayn UG (haftungsbeschränkt) · HRB 125570 · Amtsgericht Köln</p>
-          <p>Metzer Straße 30 · 50677 Köln · Geschäftsführer: Leon Röll Carrere</p>
+          <p>
+            © 2026 Vayn UG (haftungsbeschränkt) · HRB 125570 · Amtsgericht Köln
+          </p>
+          <p>
+            Metzer Straße 30 · 50677 Köln · Geschäftsführer: Leon Röll Carrere
+          </p>
         </div>
       </div>
     </footer>

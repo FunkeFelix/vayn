@@ -1,118 +1,73 @@
-import { QrCode, Users, MessageCircle, ArrowRight } from "lucide-react";
+import { QrCode, Users, User, Send, MessageCircle } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
       number: "01",
       icon: QrCode,
-      title: "Scan Entry QR",
-      description: "Event-Gäste scannen den Vayn QR-Code und sind in Sekunden eingecheckt.",
-      color: "from-primary to-primary-light"
+      title: "QR scannen und Event beitreten",
+      description: "Ein Scan reicht - du bist sofort im Event."
     },
     {
-      number: "02", 
+      number: "02",
       icon: Users,
-      title: "Discover Profiles",
-      description: "Vayn listet alle Besucher:innen mit Interessen, Skills und Match-Signalen.",
-      color: "from-secondary to-secondary-light"
+      title: "Teilnehmer sehen",
+      description: "Du siehst, wer gerade vor Ort ist."
     },
     {
       number: "03",
+      icon: User,
+      title: "Profil öffnen",
+      description: "Kurz prüfen, ob es passt."
+    },
+    {
+      number: "04",
+      icon: Send,
+      title: "Anfrage senden",
+      description: "Verbinden, bevor der Chat startet."
+    },
+    {
+      number: "05",
       icon: MessageCircle,
-      title: "Chat & Follow Up",
-      description: "Direkte Chats bleiben 24h offen – perfekt für Follow-ups ohne Visitenkarten.",
-      color: "from-primary to-secondary"
+      title: "Nach Annahme chatten",
+      description: "1:1 schreiben, sobald die Anfrage akzeptiert ist."
     }
   ];
 
   return (
-    <section className="section-padding">
+    <section id="so-funktionierts" className="section-padding">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            So einfach geht's
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            In nur drei einfachen Schritten zu wertvollen neuen Connections
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">So funktioniert's</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Fünf klare Schritte - ohne Umwege.
           </p>
         </div>
 
-        <div className="relative">
-          {/* Desktop Flow */}
-          <div className="hidden lg:block">
-            <div className="flex items-center justify-between">
-              {steps.map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <div key={index} className="flex items-center">
-                    <div className="text-center space-y-4 max-w-xs">
-                      {/* Step Circle */}
-                      <div className={`relative w-24 h-24 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center mx-auto group hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-10 h-10 text-white" />
-                        <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
-                          <span className="text-sm font-bold text-foreground">{step.number}</span>
-                        </div>
-                      </div>
-                      
-                      <h3 className="text-xl font-semibold">{step.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {step.description}
-                      </p>
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-5 stagger-reveal">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <div
+                key={step.number}
+                className="feature-card p-5 sm:p-6"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    
-                    {/* Arrow */}
-                    {index < steps.length - 1 && (
-                      <div className="flex-1 flex justify-center mx-8">
-                        <ArrowRight className="w-8 h-8 text-muted-foreground animate-pulse" />
-                      </div>
-                    )}
+                    <span className="text-sm font-semibold text-muted-foreground">{step.number}</span>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Mobile Flow */}
-          <div className="lg:hidden space-y-12">
-            {steps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div key={index} className="flex items-start gap-6">
-                  <div className={`relative w-16 h-16 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center flex-shrink-0`}>
-                    <Icon className="w-7 h-7 text-white" />
-                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-lg">
-                      <span className="text-xs font-bold text-foreground">{step.number}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 flex-1">
-                    <h3 className="text-xl font-semibold">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                  <h3 className="text-lg font-semibold">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-block p-6 bg-card rounded-2xl border shadow-lg">
-            <h3 className="text-lg font-semibold mb-2">Ready to start networking?</h3>
-            <p className="text-muted-foreground mb-4">
-              Lade Vayn herunter oder sichere dir frühzeitigen Zugang für dein Event.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary-dark transition-colors">
-                iOS App herunterladen
-              </button>
-              <button className="px-6 py-2 bg-secondary text-secondary-foreground rounded-lg font-medium hover:bg-secondary-dark transition-colors">
-                Android App herunterladen
-              </button>
-            </div>
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
