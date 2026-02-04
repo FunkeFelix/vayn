@@ -25,15 +25,23 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_BASE_PATH: /
         run: npm run build
 
-      - name: SPA 404 fallback (copy index.html -> 404.html)
+      - name: Create direct route entry points
         run: |
-          if [ -d dist ]; then cp dist/index.html dist/404.html; fi
+          if [ -d dist ]; then
+            for route in privacy account-deletion support child-safety-standards fuer-veranstalter; do
+              mkdir -p "dist/$route"
+              cp dist/index.html "dist/$route/index.html"
+            done
+            cp dist/index.html dist/404.html
+          fi
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          # optional: cname: linkup-app.example.com
+          cname: www.vaynconnect.de
